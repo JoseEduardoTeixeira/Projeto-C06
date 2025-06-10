@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 
 public class EstacaoTerrestre {
     private Satelite[] satelites;
-    private int qtdSatelites = 0;
+    private int numSatelites = 0;
     private Path arquivo = Paths.get("Dados.txt");
     private String dadosLidos;
 
@@ -17,10 +17,11 @@ public class EstacaoTerrestre {
         satelites = new Satelite[capacidade];
     }
 
-    public void adicionarSatelite(Satelite s) {
-        if (qtdSatelites < satelites.length) {
-            satelites[qtdSatelites++] = s;
+    public void adicionarSatelite(Satelite satelite) {
+        if (numSatelites < satelites.length) {
+            satelites[numSatelites++] = satelite;
             System.out.println("Satélite adicionado.");
+            
         } else {
             System.out.println("Limite de satélites atingido.");
         }
@@ -35,7 +36,7 @@ public class EstacaoTerrestre {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < qtdSatelites; i++) {
+        for (int i = 0; i < numSatelites; i++) {
             dadosLidos += satelites[i].enviarDados() + "\n";
         }
 
