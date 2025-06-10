@@ -1,0 +1,5 @@
+Data = 10/06/2025
+MetSat-1: Temperatura: 1.0°C | Umidade: 19.6%
+RadSat-A: Nível de radiação: 3.4 μSv/h
+FotoSat-1: Foto enviada com sucesso
+FotoSat-2: Foto enviada com sucesso
